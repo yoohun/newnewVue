@@ -1,24 +1,58 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+const routes = [{
+  path: '/',
+  redirect: '/index'
+},{
+  path: '/Theme',
+  component: () => import('../components/Theme.vue'),
+  meta: {title : '模板'}
+},{
+  path: '/index',
+  component: () => import('../components/Index.vue'),
+  meta: {title : '首页'}
+},
+// 校园用户
+{
+  path: '/',
+  component: () => import("../components/Index"),
+  children: [{
+    path: 'home/home',
+    component: () => import("../components/campUser/home"),
+    meta: {title: 'shouye', permission: 1}
+  },{
+    path: '/403',
+    component: () => import('../components/commonPage/403'),
+    meta: {title : '权限不足'}
+  }]
+},
+
+
+
+// 超管 二级用户
+{
+  path:'/admin',
+  component: () => import("../components/Index.vue"),
+  meta: { title : ''},
+  children:[{
+    path: 'schoolCode',
+    component: () => import("../components/insideUser/schoolCode"),
+    meta: {
+      title: '校园码',
+      permission: 2
+    }
+  },{
+    path: 'home',
+    component: () => import("../components/insideUser/home"),
+    meta: {
+      title: '首页',
+      permission: 2
+    }
+  }]
+}]
 
 const router = new VueRouter({
   mode: 'history',
