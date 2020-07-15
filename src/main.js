@@ -7,6 +7,8 @@ import ElementUI from 'element-ui'
 
 import 'element-ui/lib/theme-chalk/index.css'; // elementUI主题
 import "./assets/css/main.css";
+import "./assets/css/index.css";
+import "./assets/font/webFont/webFont.css" // 引入字体
 
 
 // import { from } from 'core-js/fn/array'

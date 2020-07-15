@@ -24,6 +24,10 @@ const routes = [{
     component: () => import("../components/campUser/home"),
     meta: {title: 'shouye', permission: 1}
   },{
+    path: 'home/message',
+    component: () => import("../components/campUser/message"),
+    meta: {title: '系统通知', permission: 1}
+  },{
     path: '/403',
     component: () => import('../components/commonPage/403'),
     meta: {title : '权限不足'}

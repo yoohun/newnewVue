@@ -16,6 +16,7 @@ body,
 }
 
 body {
+    font-family: 'SourceHanSerifSC-Medium';
     color: #333;
     font-size: 1.4rem;
 }

@@ -1,0 +1,37 @@
+
+#sidebar{
+    width: 320px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow-y: auto;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#sidebar .sidebar-left{
+    width: 190px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(138, 138, 138, 0.3);
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 150px;
+    right: 0;
+    height: 100px;
+    background-color: rgb(214, 212, 212);
+}
+#content-box{
+    position: fixed;
+    left: 150px;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    background: rgb(221, 221, 221);
+}

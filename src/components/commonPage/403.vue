@@ -1,6 +1,6 @@
 <template>
     <div>
-        这是403页面
+        完蛋 没有权限哦同志
     </div>
 </template>
 

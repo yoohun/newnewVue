@@ -1,6 +1,6 @@
 <template>
-  <div id="header">
-      header 
+  <div>
+      系统通知页面
   </div>
 </template>
 
@@ -11,4 +11,5 @@ export default {
 </script>
 
 <style>
+
 </style>

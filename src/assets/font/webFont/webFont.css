@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "SourceHanSerifSC-Medium";
+  src: url("../webFont/webFont.woff2") format("woff2"),   
+       url("../webFont/webFont.woff") format("woff"),  /* chrome、firefox */
+       url("../webFont/webFont.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+       url("../webFont/webFont.eot") format("embedded-opentype"), /* IE9 */
+       url("../webFont/webFont.svg") format("svg"),  /* iOS 4.1- */
+       url('../webFont/webFont.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+  font-weight: normal;
+  font-style: normal;
+}
